@@ -1,0 +1,85 @@
+{
+  "name": "@herbsjs/herbs2memcached",
+  "version": "1.0.0",
+  "description": "Create repositories using memcached to retrieve and store Entities.",
+  "main": "./src/herbs2memcached.js",
+  "scripts": {
+    "test": "mocha --timeout 999999 --colors --recursive ./test",
+    "testdb": "mocha --timeout 999999 --colors --exit --recursive ./testdb",
+    "testfull": "npm test && npm run testdb",
+    "coverage-report": "nyc --reporter=html --reporter=html mocha --recursive ./test --timeout 10000",
+    "coverage": "nyc --reporter=text mocha --recursive ./test --timeout 10000",
+    "semantic-release": "semantic-release",
+    "lint": "npx eslint \"**/*.{js,jsx}\" --quiet",
+    "lint:fix": "npx eslint \"**/*.{js,jsx}\" --fix",
+    "commit": "cz"
+  },
+  "directories": {
+    "lib": "src",
+    "test": "test",
+    "example": "examples"
+  },
+  "bugs": {
+    "url": "https://github.com/herbsjs/herbs2memcached/issues/"
+  },
+  "engines": {
+    "node": ">= 14.x"
+  },
+  "keywords": [
+    "domain",
+    "entity",
+    "value object",
+    "DDD",
+    "clean architecture"
+  ],
+  "author": "Jhonathan Soares",
+  "license": "MIT",
+  "homepage": "https://github.com/herbsjs/herbs2memcached#readme",
+  "dependencies": {
+    "@herbsjs/herbs": "^1.6.2"
+  },
+  "peerDependencies": {
+    "memcached": "^2.2.2"
+  },
+  "peerDependenciesMeta": {
+    "memcached": {
+      "optional": false
+    }
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.5",
+    "@semantic-release/npm": "^9.0.1",
+    "@semantic-release/release-notes-generator": "^10.0.3",
+    "@babel/eslint-parser": "^7.18.9",
+    "cz-conventional-changelog": "^3.3.0",
+    "dotenv": "^16.0.1",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-standard": "^4.1.0",
+    "mocha": "^10.0.0",
+    "nyc": "^15.1.0",
+    "prettier": "^2.7.1",
+    "memcached": "^2.2.2",
+    "semantic-release": "^19.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/herbsjs/herbs2memcached.git"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
